@@ -1,4 +1,4 @@
-/JeuJEE/nbproject
-.gitignore
-*.xml
-*.iml
+nbproject
+build.xml
+/JeuJEE/src/conf/
+/JeuJEE/web/WEB-INF/
