@@ -21,15 +21,15 @@ public class JeuTest {
     public JeuTest() {
         this.jeu = new Jeu();
         this.listAction = new ArrayList<>();
-        this.listAction.add(new Action(0, 0, false));
-        this.listAction.add(new Action(1, 65, true));
-        this.listAction.add(new Action(2, 66, true));
-        this.listAction.add(new Action(1,22, false));
-        this.listAction.add(new Action(1, 67, true));
+       // this.listAction.add(new Action(0, 0, false));
+        this.listAction.add(new Action(1, 64, true));
+        this.listAction.add(new Action(2, 65, true));
+        //this.listAction.add(new Action(1,22, false));
+        this.listAction.add(new Action(1, 66, true));
         this.listAction.add(new Action(2, 75, true));
         this.listAction.add(new Action(1, 75, false));
-        this.listAction.add(new Action(1, 85, true));
-        this.listAction.add(new Action(2, 77, true));
+        this.listAction.add(new Action(1, 46, true));
+        this.listAction.add(new Action(2, 47, false));
         //testJeu();
     }
     
@@ -42,10 +42,14 @@ public class JeuTest {
     @Test
     public void testAction() {
         jeu.initialisation();
-        assertEquals(jeu.action(0, 0),false);
-        //assertEquals(
-        //       jeu.action(a.getJoueur(), a.getAction()),
-        //       a.getResult());  
+        System.out.println(jeu.affichage());
+        for (Action a : listAction) {
+            System.out.println(""+a.getJoueur()+" "+a.getAction()+" "+a.getResult());
+            
+            assertEquals(a.getResult(),  jeu.action(a.getJoueur(), a.getAction())); 
+            System.out.println(jeu.affichage());
+        }
+       
     }
   
 }

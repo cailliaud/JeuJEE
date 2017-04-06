@@ -12,12 +12,7 @@ package jeu;
 public class Main {
     
     public static void  main (){
-        Jeu jeu = new Jeu();
-        jeu.initialisation();
-        jeu.action(1, 1);
-        jeu.action(1,2);
-        jeu.action(2,3);
-        int lastAction = jeu.derniereAction();
+        
         
         
     }

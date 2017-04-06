@@ -14,8 +14,12 @@ public class Position {
     private int colonne;
     
     public Position(int position){
-        this.ligne = position/10;
-        this.colonne = position%10; 
+        this.ligne = (position/10);
+        this.colonne = (position%10); 
+   
+      
+        
+
     }
     
     public int getLigne(){
@@ -31,5 +35,10 @@ public class Position {
         newPos.colonne = this.colonne + c;
         newPos.ligne = this.ligne+ l;
         return (newPos);
+    }
+    
+    @Override
+    public String toString(){
+        return "Ligne : "+this.ligne+" ;Colonne : "+this.colonne;
     }
 }
