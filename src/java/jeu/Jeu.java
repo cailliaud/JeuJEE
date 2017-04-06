@@ -55,7 +55,7 @@ public class Jeu implements API{
         if (aTrouve){
             calculScorePerso();
             this.lastAction = action;
-            this.statut= (this.nbJ1+this.nbJ2==64)? "finie" : (player==1) ? "joueur2":"joueur1";
+            this.statut= (this.nbJ1+this.nbJ2==64 ||this.nbJ1 == 0 ||this.nbJ2 ==0)? "finie" : (player==1) ? "joueur2":"joueur1";
             return true;
         }
         return false;
@@ -137,6 +137,20 @@ public class Jeu implements API{
     public String affichage() {
         String info = "Joueur 1 = "+this.nbJ1+" jetons.\nJoueur2 = "+ this.nbJ2 + " jetons.";
         return info;
+    }
+
+    @Override
+    public int vainqueur() {
+       if (statut.equals("finie")){
+           return (this.nbJ1>this.nbJ2)? this.nbJ1 : this.nbJ2;
+       }else {
+           return 0;
+       }
+ 
+    }
+    
+    public int[][] getPlateau (){
+        return this.plateau;
     }
     
 }

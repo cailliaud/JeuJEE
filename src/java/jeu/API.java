@@ -16,6 +16,7 @@ public interface API {
     public String statut();
     public int derniereAction();
     public String affichage();
+    public int vainqueur();
     
     
     

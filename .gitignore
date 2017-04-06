@@ -4,3 +4,4 @@ src/conf/
 web/WEB-INF/
 /JeuJEE.iml
 /.idea/
+/build/

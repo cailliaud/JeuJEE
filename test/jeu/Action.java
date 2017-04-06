@@ -15,11 +15,11 @@ public class Action {
         private int action;
         private boolean result;
 
-        public Action (int joueur, int action, boolean expected){
-            this.joueur=joueur;
-            this.action=action;
-            this.result=expected;
-        }
+    public Action (int joueur, int action, boolean expected){
+        this.joueur=joueur;
+        this.action=action;
+        this.result=expected;
+    }
 
     public int getJoueur() {
         return joueur;

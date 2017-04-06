@@ -17,35 +17,36 @@ public class JeuTest {
     private  Jeu jeu;
     private ArrayList<Action> listAction;
     
-    public JeuTest(ArrayList<Action> listAction) {
+
+    public JeuTest() {
         this.jeu = new Jeu();
-        this.listAction = listAction;
-        
+        this.listAction = new ArrayList<>();
+        this.listAction.add(new Action(0, 0, false));
+        this.listAction.add(new Action(1, 65, true));
+        this.listAction.add(new Action(2, 66, true));
+        this.listAction.add(new Action(1,22, false));
+        this.listAction.add(new Action(1, 67, true));
+        this.listAction.add(new Action(2, 75, true));
+        this.listAction.add(new Action(1, 75, false));
+        this.listAction.add(new Action(1, 85, true));
+        this.listAction.add(new Action(2, 77, true));
+        //testJeu();
     }
     
 
-
+    
+   
     /**
      * Test du jeu via le tableau d'action donné en paramètre
      */
     @Test
-    public void testJeu() {
-        jeu.initialisation();
-        for (Action action : listAction) {
-            assertEquals(jeu.action(action.getJoueur(), action.getAction()), action.getResult());
-        }
-       
-    }
-  
-    /**
-     * Test que le joueur 3 n'existe pas
-     */
-    @Test
     public void testAction() {
         jeu.initialisation();
-        assertFalse(jeu.action(3,1));
-        
-       
+        assertEquals(jeu.action(0, 0),false);
+        //assertEquals(
+        //       jeu.action(a.getJoueur(), a.getAction()),
+        //       a.getResult());  
     }
+  
 }
 
