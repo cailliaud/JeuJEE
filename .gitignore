@@ -1,4 +1,4 @@
 nbproject
 build.xml
-/JeuJEE/src/conf/
-/JeuJEE/web/WEB-INF/
+src/conf/
+web/WEB-INF/
