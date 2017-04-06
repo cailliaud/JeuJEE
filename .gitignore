@@ -1,3 +1,4 @@
-/JeuJEE/nbproject/private/
-.gitignore
-.xml
+/JeuJEE/nbproject
+*.gitignore
+*.xml
+*.iml
