@@ -2,3 +2,5 @@ nbproject
 build.xml
 src/conf/
 web/WEB-INF/
+/JeuJEE.iml
+/.idea/
