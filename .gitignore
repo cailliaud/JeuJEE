@@ -1,4 +1,4 @@
 /JeuJEE/nbproject
-*.gitignore
+.gitignore
 *.xml
 *.iml
