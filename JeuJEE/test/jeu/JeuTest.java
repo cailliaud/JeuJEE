@@ -6,10 +6,6 @@
 package jeu;
 
 import java.util.ArrayList;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -22,12 +18,11 @@ public class JeuTest {
     private ArrayList<Action> listAction;
     
     public JeuTest(ArrayList<Action> listAction) {
-        jeu = new Jeu();
+        this.jeu = new Jeu();
         this.listAction = listAction;
         
     }
     
-   
 
 
     /**
@@ -42,7 +37,15 @@ public class JeuTest {
        
     }
   
-    
-   
+    /**
+     * Test que le joueur 3 n'existe pas
+     */
+    @Test
+    public void testAction() {
+        jeu.initialisation();
+        assertFalse(jeu.action(3,1));
+        
+       
+    }
 }
 
